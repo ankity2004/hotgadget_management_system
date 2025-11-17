@@ -20,12 +20,12 @@ const userSchema = new mongoose.Schema({
 
 const user = mongoose.model("user", userSchema);
 
-( async () => {
-    await user.create({
-        name:"Surya",
-        age:21
-    });
-})();
+// ( async () => {
+//     await user.create({
+//         name:"Surya",
+//         age:21
+//     });
+// })();
 
 app.get('/',async (req,res)  => {
     const userData = await user.find();
